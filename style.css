@@ -1,0 +1,166 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.row .col-1, .row .col-2{
+  flex-basis: 50%;
+}
+
+.col-1{
+  background: url('./img/Background Image.jpg') no-repeat center center/cover;
+}
+.col-1 h2{
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing:  1px;;
+}
+
+.overlay {
+  height: 100%;
+  background: linear-gradient(to bottom, #708FDED1, #27AE60D1);
+}
+.col-1 .overlay .col-container{
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar {
+  position: absolute;
+  top: 470px;
+  left: 300px;
+  height: 8px;
+  width: 100px;
+  background: #fff;
+}
+
+.col-2{
+  padding: 3rem 4rem;
+}
+.col-2 .col-container{
+  display: flex;
+  width: 600px;
+  height: 650px;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  box-shadow: 5px 5px 13px 5px #C0C0CA;
+  border-radius: 10px;
+
+}
+.col-2 .col-container h2{
+  text-align: center;
+  color: #00A551;
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background: #F4F4F4;
+}
+
+input.primary-border{
+  border: 2px solid #00A551;
+}
+form{
+  padding: 2rem 4rem;
+}
+
+.btn {
+  width:50%;
+  padding: .5rem;
+  border-radius: 10px;
+  margin: .5rem 0;
+  background: linear-gradient(to bottom right,  #708FDED1, #27AE60D1);
+  color: #fff;
+  font-size: .9rem;
+}
+
+.form-group:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.asterisk{
+  color: #FF0000;
+}
+
+label{
+  color: #7F7E83;
+} 
+.col-2 p{
+  color: #555;
+}
+.col-2 p a{ 
+  color: #00A551;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px){
+  .col-1, .col-2{
+    flex-basis: 50%;
+  }
+  .col-2 .col-container {
+    width: 350px;
+    padding: 2rem 0;
+  }
+  .col-1 h2 {
+    font-size: 1rem;
+    margin-top: -320px;
+  }
+  .bar {
+    top: 400px;
+    left: 95px;
+  }
+  .btn {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 500px){
+    .row {
+      height: 100vh;
+    }
+    .col-1 {
+      display: none;
+      height: 100%;
+    }
+    .col-2{
+      padding: 2rem 0;
+    }
+    .col-2 .col-container{
+      height: 100%;
+      padding: 2rem 0;
+    }
+    .col-2 p {
+      text-align: center;
+    }
+    form{
+      margin-top: 3rem;
+    }
+  }
+}
